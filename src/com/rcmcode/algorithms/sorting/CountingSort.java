@@ -14,8 +14,8 @@ public class CountingSort {
 
     private static void sort(int[] numbers, int max) {
         int[] counts = new int[max + 1];
-        for(int i : numbers)
-            counts[i]++;
+        for(int item : numbers)
+            counts[item]++;
         System.out.println(Arrays.toString(counts));
 
         int j = 0;
