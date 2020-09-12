@@ -64,20 +64,19 @@ Break down list into smaller sublist and sort those sublist and once all the sub
 
 #### Run Time Complexity
 When the array is sorted  
-Best case for Divide  	=> O(log n) because when the input is divide its always runs in logarithmic time.
-Best case for Merge 	=> O(n) as we have to read each item from sublist and compare.
+Best case for Divide  	=> O(log n) because when the input is divide its always runs in logarithmic time.  
+Best case for Merge 	=> O(n) as we have to read each item from sublist and compare.  
 So merge sort runs in O(n log n)  
 
 When the array is not sorted  
-Worst case for Divide 	=> O(log n) because when the input is divide its always runs in logarithmic time.
+Worst case for Divide 	=> O(log n) because when the input is divide its always runs in logarithmic time.  
 Worst case for Merge 	=> O(n) if the array is in descending order we need to shift every item from starting position.  
 So merge sort runs in O(n log n)  
 
 #### Space Complexity
-Every time we split an array we need to allocate two new subarrays. All these subarrays are combined together, will take same amount of space as the input array.
-So in best and worst case, merge sort will take O(n) space.
+Every time we split an array we need to allocate two new subarrays, so this will take additional space in the memory. All these subarrays are combined together, will take same amount of space as the input array. So in best and worst case, merge sort will take O(n) space.  
 
-As we see Merge sort is faster than BubbleSort, SelectionSort, InsertionSort but we need extra space to maintain the sublist or subarrays. (We can improve space complexity by using in-space merge sort algorithm).
+As we see Merge sort is faster than BubbleSort, SelectionSort, InsertionSort but we need extra space to maintain the sublist or subarrays. (We can improve space complexity by using in-space merge sort algorithm).  
 
 Implemented MergeSort in MergeSort.java
 
