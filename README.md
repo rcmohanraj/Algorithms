@@ -133,3 +133,6 @@ We need to use Counting Sort when
 2) Value should be positive integers. (array index can't have negative values)  
 3) Most of the values in the range are present. (otherwise we will have empty array cells)  
 
+Implemented CountingSort in CountingSort.java
+
+--------------------------------------------------------------------------------
