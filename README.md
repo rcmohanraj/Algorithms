@@ -3,7 +3,7 @@
 ### Complexities Overview
 https://www.bigocheatsheet.com/
 
-## Sorting Algorithms (Comparison Sorting)
+## Comparison Sorting Algorithms
 
 ### Bubble Sort
 We scan the array from left to right, if items are out of order we swap them. After each pass the largest items bubbles up and moves to last position.
@@ -113,7 +113,7 @@ Implemented QuickSort in QuickSort.java
 
 --------------------------------------------------------------------------------
 
-## Sorting Algorithms (Non-Comparison Sorting)
+## Non-Comparison Sorting Algorithms
 
 ### Counting Sort
 Count the occurrences of the items in the array and store in a different array by incrementing value in the index of the item. Then use this count array to sort the items.  
@@ -134,5 +134,32 @@ We need to use Counting Sort when
 3) Most of the values in the range are present. (otherwise we will have empty array cells)  
 
 Implemented CountingSort in CountingSort.java
+
+--------------------------------------------------------------------------------
+
+### Bucket Sort
+We have to distribute the array into no of buckets and sort this using any sort algorithm then combine the result. Instead of sorting larger array, we can sort smaller buckets and we can sort in parallel as well.
+
+Bucket => item / number of buckets
+
+#### Run Time Complexity
+##### Best Case
+Distribution		=> O(n) We need to iterate the input array to distribute items to different buckets.  
+Iterating Buckets	=> O(k) We need to iterate over the buckets to sort each list and put them to the input array.  
+Sorts 				=> In best case, we have single item in each bucket so O(1).  
+Total cost is O(n+k+1) which means O(n+k).  
+
+##### Worst Case
+Distribution		=> O(n) We need to iterate the input array to distribute items to different buckets.  
+Iterating Buckets	=> O(k) We need to iterate over the buckets to sort each list and put them to the input array.  
+Sorts 				=> In worst case, we can get O(n^2) (in the case of using InsertionSort).  
+Total cost is O(n+k+n^2) which means O(n^2).  
+
+If we allocate more buckets our algorithm runs faster where we have O(n) as complexity. But this comes with additional space. If we reduce the buckets we will have O(n^2) as complexity but we can save memory.  
+
+#### Space Complexity
+Assume the number of buckets are k and then each bucket will have linked list to store items in the array which is n. So the space complexity is O(n+k), which we can map as O(n+k).
+
+Implemented BucketSort in BucketSort.java
 
 --------------------------------------------------------------------------------
