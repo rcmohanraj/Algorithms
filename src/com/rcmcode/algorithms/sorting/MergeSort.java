@@ -7,6 +7,7 @@ public class MergeSort {
         int[] numbers = { 8, 2, 4, 1, 7 , 3};
 //        int[] numbers = { 1, 2, 3, 4, 5, 6 };
 //        int[] numbers = { 2, 20, 1 };
+//        int[] numbers = { 38, 27, 43, 3, 9, 82, 10 };
         sort(numbers);
     }
 
@@ -19,8 +20,8 @@ public class MergeSort {
         if(size < 2) {
             return;
         }
-        //System.out.println("Splitting Array:"+Arrays.toString(numbers));
         int mid = size / 2; //  5/2 => 2
+//        System.out.println("mid :"+mid );
         int[] left = new int[mid];//total 2 => 0, 1
         int[] right = new int[size - mid];//total 3 => 2, 3, 4
         for(int i = 0; i < mid; i++) {
@@ -29,6 +30,8 @@ public class MergeSort {
         for(int i = mid; i < size; i++) {
             right[i - mid] = numbers[i];
         }
+//        System.out.println("Left Array   :"+Arrays.toString(left));
+//        System.out.println("Right Array  :"+Arrays.toString(right));
         split(left);
         split(right);
         compareAndMerge(left, right, numbers);
