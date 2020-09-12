@@ -1,6 +1,6 @@
 # Implementing Sorting and Searching Algorithms using Java
 
-### For Checking Complexities
+### Complexities Overview
 https://www.bigocheatsheet.com/
 
 ## Sorting Algorithms
@@ -76,8 +76,37 @@ So merge sort runs in O(n log n)
 #### Space Complexity
 Every time we split an array we need to allocate two new subarrays, so this will take additional space in the memory. All these subarrays are combined together, will take same amount of space as the input array. So in best and worst case, merge sort will take O(n) space.  
 
-As we see Merge sort is faster than BubbleSort, SelectionSort, InsertionSort but we need extra space to maintain the sublist or subarrays. (We can improve space complexity by using in-space merge sort algorithm).  
+As we see Merge sort is faster than BubbleSort, SelectionSort, InsertionSort but we need extra space to maintain the sublist or subarrays. (We can improve space complexity by using in-place merge sort algorithm).  
 
 Implemented MergeSort in MergeSort.java
+
+--------------------------------------------------------------------------------
+
+### Quick Sort
+One of the most used sorting algorithm in the languages. It doesn't require additional space. We can sort an array in-place. It works mainly by partitioning the input array using the pivot element. Typically pivot element will be selected as the last element and in some case pivot can be first or middle. After selecting the pivot, we need to move the items which are smaller than pivot to left and greater than pivot to right side. We continue until all the items are sorted. 
+
+#### Run Time Complexity
+##### Best Case
+Cost of Partitioning the array				=> O(n) because we need to iterate the array and swap the item if necessary.  
+How many times recursively Partitioning 	=> O(log n) as if we partition an array using pivot, we will get two nearly equal size array. So the input is divided.  
+So Quick sort runs in O(n log n)  
+
+##### Worst Case
+When the array is sorted ascending and Pivot as last item as well as array in descending order and pivot as first item.  
+To work around we can use following pivot picking solutions  
+1) Pick Random  
+2) Pick Middle  
+3) Average of first, middle and last  
+
+Cost of Partitioning the array				=> O(n) because we need to iterate the array and swap the item if necessary.  
+How many times recursively Partitioning 	=> O(n) If we pick the wrong pivot, then we end up dividing/partition the array n times.  
+So Quick sort runs in O(n^2)  
+
+#### Space Complexity
+Unlike Merge Sort, Quick sort using in-place sorting (swap items by using input array) without any additional space. But it will require additional space for recursive calls as JVM will keep track the recursive calls in stack.  
+Best Case 	=> O(log n) as we have log n number of partitions  
+Worst Case 	=> O(n) as we have n number of partitions  
+
+Implemented QuickSort in QuickSort.java
 
 --------------------------------------------------------------------------------
