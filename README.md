@@ -163,3 +163,24 @@ Assume the number of buckets are k and then each bucket will have linked list to
 Implemented BucketSort in BucketSort.java
 
 --------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+## Searching Algorithms
+
+### Linear Search
+Simplest of all the search algorithm. Iterate over array and inspect each item. If we find it we can return the index.  
+
+#### Run Time Complexity
+##### Best Case
+The target item can be at first index. So O(1) comparison.  
+
+##### Worst Case
+The target item can be at last index or not at all present in the array. So we need n comparisons which is O(n).  
+
+As the input grows the complexity of this search algorithm increases.  
+
+Implemented LinearSearch in LinearSearch.java
+
+--------------------------------------------------------------------------------
+
+
