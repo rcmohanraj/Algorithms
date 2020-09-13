@@ -211,11 +211,21 @@ In every step we are dividing the array into three parts, so this algorithm runs
 log<sub>2</sub> 8 = 3  
 log<sub>3</sub> 8 = 1.89  
 
-It doesn't mean that the Ternary Search is faster than Binary Search. Because in the Binary Search we have one mid value to compare with left and right. But in Ternary Search we have two mid values to compare with left and right, which makes more comparison statements. Thus in worst case, Binary Search is faster due to less comparisons.
+It doesn't mean that the Ternary Search is faster than Binary Search. Because in the Binary Search we have one mid value to compare with left and right. But in Ternary Search we have two mid values to compare with left and right, which makes more comparison statements. Thus in worst case, Binary Search is faster due to less comparison statements.
 
 Implemented TernarySearch using recursive approach in TernarySearch.java
 
 --------------------------------------------------------------------------------
 
+### Jump Search
+Its an improved version of LinearSearch but not faster than BinarySearch. We can divide the array into blocks and then directly jump to the blocks to get the item. Checking the end of each blocks, if end value is less than target value, then we can jump to another block. If its greater than target value we can use that block and apply LinearSearch to find the target item.
 
+block size = &radic;n. For example if we have 9 elements, we block size will be 3.
+
+#### Run Time Complexity
+O(&radic;n) complexity => Maximum number of items we have to search is equal to the block size.
+
+Implemented JumpSearch using recursive approach in JumpSearch.java
+
+--------------------------------------------------------------------------------
 
