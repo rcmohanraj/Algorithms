@@ -183,4 +183,20 @@ Implemented LinearSearch in LinearSearch.java
 
 --------------------------------------------------------------------------------
 
+### Binary Search
+Its faster than LinearSearch but it only works on the sorted list. We need to find the middle using left+right/2 formula and then check the middle is lesser or greater than target item, we can continue divide like this and search until our target item found.
 
+#### Run Time Complexity
+In every step we are dividing the array into half, so this algorithm runs O(log n) complexity.
+
+#### Space Complexity
+1) Recursive	=> If we use recursive functions to implement search, Java Runtime will store these recursive calls in the Stack, the amount of space required in Stack is equal to number of recursive functions, which is O(log n)
+2) Iterative	=> O(1) as we have one loop statement stored in Stack.
+
+But both these approaches are good, even though the Iterative approach takes O(1) space, recursive function also takes less space in Stack. For example if have 1 million items in the array, we need totally 19 comparisons to find the target item. log<sub>2</sub> 1,000,000 = 19.
+
+Implemented BinarySearch using iterative and recursive approaches in BinarySearch.java
+
+--------------------------------------------------------------------------------
+
+### Ternary Search
