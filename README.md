@@ -193,10 +193,29 @@ In every step we are dividing the array into half, so this algorithm runs O(log 
 1) Recursive	=> If we use recursive functions to implement search, Java Runtime will store these recursive calls in the Stack, the amount of space required in Stack is equal to number of recursive functions, which is O(log n)
 2) Iterative	=> O(1) as we have one loop statement stored in Stack.
 
-But both these approaches are good, even though the Iterative approach takes O(1) space, recursive function also takes less space in Stack. For example if have 1 million items in the array, we need totally 19 comparisons to find the target item. log<sub>2</sub> 1,000,000 = 19.
+But both these approaches are good, even though the Iterative approach takes O(1) space, recursive function also takes less space in Stack. For example if have 1 million items in the array, we need totally 19 comparisons to find the target item. log<sub>2</sub>1,000,000 = 19.
 
 Implemented BinarySearch using iterative and recursive approaches in BinarySearch.java
 
 --------------------------------------------------------------------------------
 
 ### Ternary Search
+Instead of dividing the array into 2 parts, we divide into 3 parts. 
+Size of Partitions = (right - left) / 3.  
+mid 1 = left + partition size  
+mid 2 = right - partition size  
+
+#### Run Time Complexity
+In every step we are dividing the array into three parts, so this algorithm runs O(log<sub>3</sub> n) complexity.
+
+log<sub>2</sub> 8 = 3  
+log<sub>3</sub> 8 = 1.89  
+
+It doesn't mean that the Ternary Search is faster than Binary Search. Because in the Binary Search we have one mid value to compare with left and right. But in Ternary Search we have two mid values to compare with left and right, which makes more comparison statements. Thus in worst case, Binary Search is faster due to less comparisons.
+
+Implemented TernarySearch using recursive approach in TernarySearch.java
+
+--------------------------------------------------------------------------------
+
+
+
