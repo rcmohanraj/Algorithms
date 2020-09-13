@@ -220,7 +220,7 @@ Implemented TernarySearch using recursive approach in TernarySearch.java
 ### Jump Search
 Its an improved version of LinearSearch but not faster than BinarySearch. We can divide the array into blocks and then directly jump to the blocks to get the item. Checking the end of each blocks, if end value is less than target value, then we can jump to another block. If its greater than target value we can use that block and apply LinearSearch to find the target item.
 
-block size = &radic;n. For example if we have 9 elements, we block size will be 3.
+block size = &radic;n. For example if array has 9 elements then block size will be 3.
 
 #### Run Time Complexity
 O(&radic;n) complexity => Maximum number of items we have to search is equal to the block size.
@@ -229,3 +229,15 @@ Implemented JumpSearch using recursive approach in JumpSearch.java
 
 --------------------------------------------------------------------------------
 
+### Exponential Search
+We have to start from the small range, If target item is not found then we need to double the range at each step. Once we find the range we can do BinarySearch to get the target item.
+
+bound = we need to double the bound (bound * 2) until we find the range. Once we find out the range we can use the BinarySearch with start as previous bound (bound / 2) and end as bound.
+
+#### Run Time Complexity
+Assume that i will be the position or range of the target item. If the item exist in the range of start to i, then we don't need to consider the remaining part of the array. Its like doing BinarySearch over i elements. So the complexity will be O(log i).
+
+Implemented ExponentialSearch using iterative and recursive approaches in ExponentialSearch.java
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
