@@ -163,7 +163,6 @@ Assume the number of buckets are k and then each bucket will have linked list to
 Implemented BucketSort in BucketSort.java
 
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
 
 ## Searching Algorithms
 
@@ -239,5 +238,4 @@ Assume that i will be the position or range of the target item. If the item exis
 
 Implemented ExponentialSearch using iterative and recursive approaches in ExponentialSearch.java
 
---------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
